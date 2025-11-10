@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  flipkart-scraper-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flipkart-scraper-api
+    ports:
+      - "8000:8000"
+    environment:
+      # Optional: Add proxy configuration if needed
+      - PROXY_HTTP_URL=${PROXY_HTTP_URL}
+      - PROXY_HTTPS_URL=${PROXY_HTTPS_URL}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/docs', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    # Optional: Uncomment to use .env file
+    # env_file:
+    #   - .env
