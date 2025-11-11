@@ -1,7 +1,7 @@
 {
     "actorSpecification": 1,
-    "name": "flipkart-review-scraper",
-    "title": "Flipkart Review Scraper",
+    "name": "flipkart-reviews-scraper",
+    "title": "Flipkart Reviews Scraper",
     "description": "Extract authentic product reviews from Flipkart with detailed information including ratings, review text, author details, location, images, votes, and metadata. Scrape all reviews or limit to a specific count using the max_reviews parameter.\n\n⚠️ IMPORTANT NOTICE: Flipkart's displayed review counts are often inflated and don't reflect the actual number of reviews available on their platform. The review count shown on Flipkart's website is typically fake or manipulated for marketing purposes. This actor returns only the genuine, scrapeable reviews that actually exist on the platform.",
     "version": "1.0",
     "meta": {

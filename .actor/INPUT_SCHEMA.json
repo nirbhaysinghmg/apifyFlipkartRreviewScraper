@@ -3,13 +3,15 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "flipkart_url": {
-            "title": "Flipkart Product URL",
-            "type": "string",
-            "description": "The Flipkart product URL to scrape reviews from (must contain /p/)",
-            "editor": "textfield",
-            "example": "https://www.flipkart.com/product-name/p/itm123?pid=ABC123",
-            "pattern": "^https?://.*flipkart\\.com/.*"
+        "flipkart_urls": {
+            "title": "Flipkart Product URLs",
+            "type": "array",
+            "description": "List of Flipkart product URLs to scrape reviews from. Click '+' to add more URLs.",
+            "editor": "stringList",
+            "placeholderValue": "https://www.flipkart.com/product-name/p/itm123?pid=ABC123",
+            "patternValue": "^https?://.*flipkart\\.com/.*",
+            "minItems": 1,
+            "uniqueItems": true
         },
         "max_reviews": {
             "title": "Maximum Reviews",
@@ -38,5 +40,5 @@
             }
         }
     },
-    "required": ["flipkart_url"]
+    "required": ["flipkart_urls"]
 }
