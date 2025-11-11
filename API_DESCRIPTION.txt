@@ -1,0 +1,3 @@
+Flipkart Review Scraper API - Extract authentic product reviews from Flipkart with detailed information including ratings, review text, author details, location, images, votes, and metadata. Scrape all reviews or limit to a specific count using the max_reviews parameter.
+
+⚠️ IMPORTANT NOTICE: Flipkart's displayed review counts are often inflated and don't reflect the actual number of reviews available on their platform. The review count shown on Flipkart's website is typically fake or manipulated for marketing purposes.

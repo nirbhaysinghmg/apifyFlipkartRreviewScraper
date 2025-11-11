@@ -1,0 +1,42 @@
+{
+    "title": "Flipkart Review Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "flipkart_url": {
+            "title": "Flipkart Product URL",
+            "type": "string",
+            "description": "The Flipkart product URL to scrape reviews from (must contain /p/)",
+            "editor": "textfield",
+            "example": "https://www.flipkart.com/product-name/p/itm123?pid=ABC123",
+            "pattern": "^https?://.*flipkart\\.com/.*"
+        },
+        "max_reviews": {
+            "title": "Maximum Reviews",
+            "type": "integer",
+            "description": "Maximum number of reviews to scrape. Leave empty or set to 0 to scrape all reviews.",
+            "editor": "number",
+            "example": 100,
+            "default": 0,
+            "minimum": 0
+        },
+        "use_apify_proxy": {
+            "title": "Use Apify Proxy",
+            "type": "boolean",
+            "description": "Enable to use Apify's built-in proxy service (requires Apify subscription). Recommended if getting blocked.",
+            "default": false,
+            "editor": "checkbox"
+        },
+        "proxy_configuration": {
+            "title": "Proxy Configuration (Optional)",
+            "type": "object",
+            "description": "Custom proxy settings. Leave empty if not using external proxy.",
+            "editor": "json",
+            "prefill": {
+                "http": "",
+                "https": ""
+            }
+        }
+    },
+    "required": ["flipkart_url"]
+}

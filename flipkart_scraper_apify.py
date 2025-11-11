@@ -3,7 +3,7 @@
 Flipkart Review Scraper - Fetches reviews from Flipkart product pages
 """
 
-import requests
+from curl_cffi import requests
 import json
 import re
 import os
@@ -218,6 +218,7 @@ def fetch_and_extract_reviews(url: str, params: dict, page_num: int = None) -> L
                 params=params,
                 cookies=cookies,
                 headers=headers,
+                impersonate= "chrome110",
                 # proxies = PROXY_CONFIG,
                 timeout=30
             )

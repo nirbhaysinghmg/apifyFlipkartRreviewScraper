@@ -1,0 +1,61 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files (don't upload secrets)
+.env
+.env.local
+
+# CSV files (data files - not needed in actor)
+*.csv
+
+# Documentation (uploaded separately)
+DEPLOYMENT.md
+API_DESCRIPTION.txt
+
+# Docker files (using Dockerfile.apify instead)
+docker-compose.yml
+.dockerignore
+
+# Test files
+test.py
+find_unprocessed_urls.py
+
+# FastAPI specific (not needed for Apify actor)
+api/
+
+# Other
+*.log
+tmp/
+temp/
